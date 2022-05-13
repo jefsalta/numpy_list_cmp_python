@@ -27,10 +27,18 @@ que ya dispongamos de Python. El objetivo es:
         la suma y los números recoletados
     b) Si el número es mayor a 21 se debe informar al usuario que perdio
 '''
+import random
+
 
 if __name__ == '__main__':
     print('Comenzamos a divertirnos!')
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
-
+    numeros = [random.randrange(1,11) for x in range(3)]
+    print('NUMEROS OBTENIDOS: ',numeros)
+    suma = sum(numeros)
+    if suma <= 21:
+        print('GANO LA PARTIDA, PUNTOS OBTENIDOS: ',suma)
+    else:
+        print('PERDIO LA PARTIDA, PUNTOS OBTENIDOS: ', suma)
     print("terminamos")

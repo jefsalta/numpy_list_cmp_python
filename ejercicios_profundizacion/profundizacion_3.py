@@ -62,5 +62,6 @@ if __name__ == '__main__':
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
 
-
+    lista_compra_productos = [producto[id] if producto.get(id) else 'NaN' for id in lista_compra_id]
+    print(lista_compra_productos)
     print("terminamos")
