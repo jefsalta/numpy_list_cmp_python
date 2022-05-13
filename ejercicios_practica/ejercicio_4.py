@@ -8,7 +8,12 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios con comprensión de listas
-
+def es_num(n):
+    try:
+        int(n)   
+    except ValueError:
+        return False
+    return True
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
@@ -24,8 +29,13 @@ if __name__ == '__main__':
     # reemplazar dicho str "no numérico" por 0
     # TIP: Recomendamos ver el método "isdigit" de strings
     # para aplicar en este caso.
-    list_numeros_str = ['5', '2', '3', '', '7', 'NaN']
-
+    list_numeros_str = ['-5', '2', '3', '', '7', 'NaN']
+    list_numeros_int = [int(x) if x.isdigit() else 0 for x in list_numeros_str]
+    list_numeros_int_neg = [int(x) if es_num(x) else 0 for x in list_numeros_str]
+    
+    print(list_numeros_str)
+    print(list_numeros_int)
+    print(list_numeros_int_neg)
 
     # ¿Ya terminaron el ejercicio? ¿Por qué no prueban
     # hacer negativo alguno de los números de la lista?

@@ -19,7 +19,9 @@ if __name__ == '__main__':
     # (len) de un string pasado como parámetro
 
     # len_string = lambda......
-
+    longitud = lambda cadena: len(cadena)
+    print(longitud('zapallo'))
+    
     # 2)
     # Lista de string
     palabras = ['Inove', 'casa', 'programacion']
@@ -35,5 +37,6 @@ if __name__ == '__main__':
     # directamente la lambda.
 
     # palabras_len = list(map....)
-
+    longitud = list(map(lambda cadena : len(cadena), palabras))
+    print(longitud)
     print("terminamos")
